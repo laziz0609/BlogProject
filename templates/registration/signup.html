@@ -4,6 +4,7 @@
 
 {% block content %}
    <h2>Ro'yxatdan o'tish</h2>
+   <a type="submit" href="{% url 'login' %}">Kirish</a>
    <form method="post">{% csrf_token %}
        {{ form|crispy}}
        <button type="submit">Ro'yxatdan o'tish</button>

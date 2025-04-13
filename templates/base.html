@@ -10,6 +10,7 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}Laziz blog{% endblock title %}</title>
+    <link rel="icon" type="image/svg" href="{% static 'img/logo.svg' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap 5 CSS -->
@@ -19,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4B41A;">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="/static/assets/img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+                <img src="static/img/logo.svg" width="60" height="60" class="d-inline-block align-top" alt="">
                 Laziz Blog
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -38,7 +39,7 @@
                                 {{ user.username | title }}
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <!-- <li><a class="dropdown-item" href="{% url 'article_new' %}">Yangi post</a></li> -->
+                                <li><a class="dropdown-item" href="{% url 'article_create' %}">Yangi post</a></li>
                                 <li><a class="dropdown-item" href="{% url 'password_change' %}">Kalit so'zni o'zgartirish</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" style="color: red;" href="{% url 'logout' %}">Chiqish</a></li>
